@@ -14,15 +14,15 @@ public class TiendaFotografia {
         Foto foto1 = new Foto("foto1.jpg");
         Foto foto2 = new Foto("foto2.jpg");
 
-        // Crear una impresión de fotos
+      // Crear una impresión de fotos (composición)
         Foto[] fotos = {foto1, foto2};
         Impresion impresion = new Impresion("Color", fotos);
         impresion.imprimirFotos();
 
-        // Crear un pedido
+        // Crear un pedido (agregación)
         Producto[] productos = {camara1, camara2};
         Pedido pedido = new Pedido(cliente, productos, LocalDate.now(), 12345678);
         pedido.mostrarPedido();
     }
-}    
+}  
 
