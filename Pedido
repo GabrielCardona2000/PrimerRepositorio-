@@ -1,0 +1,23 @@
+import java.time.LocalDate;
+import java.util.Arrays;
+// Clase Pedido
+class Pedido {
+    private Cliente cliente;
+    private Producto[] productos;
+    private LocalDate fecha;
+    private int numeroTarjetaCredito;
+
+    public Pedido(Cliente cliente, Producto[] productos, LocalDate fecha, int numeroTarjetaCredito) {
+        this.cliente = cliente;
+        this.productos = productos;
+        this.fecha = fecha;
+        this.numeroTarjetaCredito = numeroTarjetaCredito;
+    }
+
+    public void mostrarPedido() {
+        System.out.println("Pedido realizado por: " + cliente);
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Número de tarjeta de crédito: " + numeroTarjetaCredito);
+        System.out.println("Productos en el pedido: " + Arrays.toString(productos));
+    }
+}
