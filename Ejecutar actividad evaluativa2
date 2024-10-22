@@ -1,0 +1,28 @@
+import java.time.LocalDate;
+import java.util.Arrays;
+// Clase principal 
+public class TiendaFotografia {
+    public static void main(String[] args) {
+        // Crear un cliente
+        Cliente cliente = new Cliente("123456789", "Juan Pérez");
+
+        // Crear algunos productos (cámaras)
+        Producto camara1 = new Camara(1, "Canon", "EOS R5");
+        Producto camara2 = new Camara(2, "Nikon", "Z7 II");
+
+        // Crear  fotos
+        Foto foto1 = new Foto("foto1.jpg");
+        Foto foto2 = new Foto("foto2.jpg");
+
+        // Crear una impresión de fotos
+        Foto[] fotos = {foto1, foto2};
+        Impresion impresion = new Impresion("Color", fotos);
+        impresion.imprimirFotos();
+
+        // Crear un pedido
+        Producto[] productos = {camara1, camara2};
+        Pedido pedido = new Pedido(cliente, productos, LocalDate.now(), 12345678);
+        pedido.mostrarPedido();
+    }
+}    
+
