@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 import java.util.Arrays;
-// Clase Pedido
+// Clase Pedido 
 class Pedido {
     private Cliente cliente;
     private Producto[] productos;
@@ -18,6 +18,9 @@ class Pedido {
         System.out.println("Pedido realizado por: " + cliente);
         System.out.println("Fecha: " + fecha);
         System.out.println("Número de tarjeta de crédito: " + numeroTarjetaCredito);
-        System.out.println("Productos en el pedido: " + Arrays.toString(productos));
+        System.out.println("Productos en el pedido:");
+        for (Producto producto : productos) {
+            System.out.println(producto.toString());  
+        }
     }
 }
